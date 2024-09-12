@@ -157,3 +157,25 @@ label {
 .attribution a {
 	color: hsl(228, 45%, 44%);
 }
+
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px){
+    .header {
+        height: 40vh;
+    }
+
+    .search {
+        width: 90%;
+    }
+
+    .details {
+        flex-direction: column;
+        height: max-content;
+        width: 90%;
+    }
+
+    .address-container:is(:not(:last-child))::after {
+        display: none;
+    }
+}
