@@ -13,3 +13,7 @@
 
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
+
+# Avoid my API key being exposed to the public
+.env
+config.js
