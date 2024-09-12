@@ -1,12 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
+:root {
+	/* ---- Colors ---- */
+	--veryDarkGray: hsl(0, 0%, 17%);
+	--darkGray: hsl(0, 0%, 59%);
 
+	/* ---- Typography ---- */
+	/* Body */
+	--fontSize: 18px; /* (text input) */
 
+	/* Font Weight */
+	--lightWeight: 400;
+	--normalWeight: 500;
+	--heavyWeight: 700;
+}
+
+* {
+	margin: 0;
+	bottom: 0;
+	box-sizing: border-box;
+	font-family: "Rubik", sans-serif;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    height: 30vh;
+    background: url('./images/pattern-bg-desktop.png') no-repeat center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: var(--normalWeight);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.search {
+    display: flex;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 37.5rem;
+    margin-bottom: 4rem;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: var(--fontSize);
+}
+
+.search-input::placeholder {
+    padding-left: 1rem;
+}
+
+.search-btn {
+    background: var(--veryDarkGray);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-btn:hover {
+    background: var(--darkGray);
+}
+
+.details {
+    background: #fff;
+    height: 20vh;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.address-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.address-container:is(:not(:last-child)) {
+    margin-right: 1.5rem;
+}
+
+.address-container:is(:not(:last-child))::after {
+    position: absolute;
+    content: '';
+    height: 80px;
+    width: 1px;
+    color: var(--darkGray);
+    border-right: 1px solid var(--darkGray);
+    top: 50%;
+    transform: translateY(-50%);
+    right: -0.75rem;
+}
+
+label {
+    color: var(--darkGray);
+    font-weight: var(--normalWeight);
+}
+
+#address, #location, #time, #provider {
+    background: transparent;
+    border: none;
+    text-align: center;
+    font-size: var(--fontSize);
+    font-weight: var(--heavyWeight);
+}
+
+#map {
+    height: 70vh;
+    width: 100%;
+    bottom: 1rem;
+    z-index: 1;
+}
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
+	font-size: 11px;
+	text-align: center;
+    z-index: 2;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+	color: hsl(228, 45%, 44%);
 }

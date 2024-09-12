@@ -1,42 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <!-- ----Leaflet CSS---- -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 
   <!-- ----Leaflet JS---- -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-  
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
   <title>Frontend Mentor | IP Address Tracker</title>
-
-  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <div class="container">
+    <div class="header">
+      <h1>IP Address Tracker</h1>
 
-  IP Address Tracker
+      <div class="search">
+        <input type="search" placeholder="Search for any IP address or domain" class="search-input">
+        <button class="search-btn"><img src="./images/icon-arrow.svg"></button>
+      </div>
 
-  Search for any IP address or domain
+      <div class="details">
+        <div class="address-container">
+          <label for="address">IP Address</label>
+          <input id="address" name="address" disabled>
+        </div>
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Arnold Agaba</a>.
+        <div class="address-container">
+          <label for="location">Location</label>
+          <input id="location" name="location" disabled>
+        </div>
+
+
+        <div class="address-container">
+          <label for="time">Timezone <!-- add offset value dynamically using the API --></label>
+          <input id="time" name="time" disabled>
+        </div>
+
+
+        <div class="address-container">
+          <label for="provider">ISP</label>
+          <input id="provider" name="provider" disabled>
+        </div>
+      </div>
+    </div>
+
+    <div id="map"></div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Arnold Agaba</a>.
+    </div>
   </div>
+
+
+
+  
 
   <script src="script.js"></script>
 </body>
+
 </html>
